@@ -26,15 +26,9 @@ let updateTimer;
 const music_list = [
   {
     img: "images/1.jpg",
-    name: "Chill With Me",
-    artist: "DoHung",
-    music: "music/cualado.mp3",
-  },
-  {
-    img: "images/1.jpg",
     name: "Enjoy?",
     artist: "DoHung",
-    music: "music/ratherbexwithoutme.mp3",
+    music: "music/enjoy.mp3",
   },
 ];
 
