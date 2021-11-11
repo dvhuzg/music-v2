@@ -111,3 +111,19 @@
         font-size: 1.0rem;
     }
   }
+@media (max-height: 657px) {
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+      font-size: 12px;
+    }
+    .wrapper {
+      height: 600px;
+    }
+    .track-art {
+      height: 170px;
+      width: 170px;
+    }
+  }
