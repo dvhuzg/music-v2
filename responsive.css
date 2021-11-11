@@ -118,6 +118,7 @@
     .prev-track,
     .next-track {
       font-size: 12px;
+      margin-bottom:-12px;
     }
     .wrapper {
       height: 600px;
