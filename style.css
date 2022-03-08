@@ -89,6 +89,7 @@ body{
     background: #d3d3d3;
     -webkit-transition: .2s;
     transform: opacity .2s;
+    cursor: pointer;
 }
 .seek_slider::-webkit-slider-thumb,
 .volumn_slider::-webkit-slider-thumb{
