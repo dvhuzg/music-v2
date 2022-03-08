@@ -86,7 +86,7 @@ body{
     -moz-appearance: none;
     appearance: none;
     height: 5px;
-    background: #83a9ff;
+    background: #d3d3d3;
     -webkit-transition: .2s;
     transform: opacity .2s;
 }

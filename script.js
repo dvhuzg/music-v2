@@ -130,10 +130,23 @@ curr_track.addEventListener("ended", function () {
 function playpauseTrack() {
   isPlaying ? pauseTrack() : playTrack();
 }
+const cdThumbAnimate = track_art.animate(
+  [
+    {
+      transform: "rotate(360deg)",
+    }
+  ],
+  {
+    duration:10000,
+    iterations: Infinity
+  }
+);
+cdThumbAnimate.pause();
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-  track_art.classList.add("rotate");
+  // track_art.classList.add("rotate");
+  cdThumbAnimate.play();
   no_wave.classList.remove("loader1");
   wave.classList.add("loader");
   playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
@@ -142,6 +155,7 @@ function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
 //   track_art.classList.remove('rotate');
+cdThumbAnimate.pause();
   wave.classList.remove("loader");
   no_wave.classList.add("loader1");
   playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
@@ -175,6 +189,10 @@ function prevTrack() {
   loadTrack(track_index);
   playTrack();
 }
+curr_track.addEventListener("ended", function () {
+  nextTrack();
+});
+
 function seekTo() {
   let seekto = curr_track.duration * (seek_slider.value / 100);
   curr_track.currentTime = seekto;
@@ -214,6 +232,3 @@ function setUpdate() {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
-curr_track.addEventListener("ended", function () {
-  nextTrack();
-});
